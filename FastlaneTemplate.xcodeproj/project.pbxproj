@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		CE0B6C0F26BBC92200165651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B6C0D26BBC92200165651 /* LaunchScreen.storyboard */; };
 		CE0B6C1A26BBC92200165651 /* FastlaneTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B6C1926BBC92200165651 /* FastlaneTemplateTests.swift */; };
 		CE0B6C2526BBC92300165651 /* FastlaneTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B6C2426BBC92300165651 /* FastlaneTemplateUITests.swift */; };
+		CE2BCD5626BC0AE0009C1C3B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE2BCD5526BC0AE0009C1C3B /* FirebaseAnalytics */; settings = {ATTRIBUTES = (Required, ); }; };
+		CEAC6C9D26BBF156007D31E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAC6C9C26BBF156007D31E9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		CE0B6C2026BBC92300165651 /* FastlaneTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastlaneTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0B6C2426BBC92300165651 /* FastlaneTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneTemplateUITests.swift; sourceTree = "<group>"; };
 		CE0B6C2626BBC92300165651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAC6C9C26BBF156007D31E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2BCD5626BC0AE0009C1C3B /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				CE0B6C1826BBC92200165651 /* FastlaneTemplateTests */,
 				CE0B6C2326BBC92300165651 /* FastlaneTemplateUITests */,
 				CE0B6BFD26BBC92100165651 /* Products */,
+				CE2BCD3B26BC06DC009C1C3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +113,7 @@
 				CE0B6C0B26BBC92200165651 /* Assets.xcassets */,
 				CE0B6C0D26BBC92200165651 /* LaunchScreen.storyboard */,
 				CE0B6C1026BBC92200165651 /* Info.plist */,
+				CEAC6C9C26BBF156007D31E9 /* GoogleService-Info.plist */,
 				CE0B6C0826BBC92100165651 /* FastlaneTemplate.xcdatamodeld */,
 			);
 			path = FastlaneTemplate;
@@ -131,6 +137,13 @@
 			path = FastlaneTemplateUITests;
 			sourceTree = "<group>";
 		};
+		CE2BCD3B26BC06DC009C1C3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,12 +154,16 @@
 				CE0B6BF826BBC92100165651 /* Sources */,
 				CE0B6BF926BBC92100165651 /* Frameworks */,
 				CE0B6BFA26BBC92100165651 /* Resources */,
+				CE2BCD6626BC0DE4009C1C3B /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FastlaneTemplate;
+			packageProductDependencies = (
+				CE2BCD5526BC0AE0009C1C3B /* FirebaseAnalytics */,
+			);
 			productName = FastlaneTemplate;
 			productReference = CE0B6BFC26BBC92100165651 /* FastlaneTemplate.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +235,9 @@
 				Base,
 			);
 			mainGroup = CE0B6BF326BBC92100165651;
+			packageReferences = (
+				CE2BCD5426BC0AE0009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CE0B6BFD26BBC92100165651 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0B6C0F26BBC92200165651 /* LaunchScreen.storyboard in Resources */,
+				CEAC6C9D26BBF156007D31E9 /* GoogleService-Info.plist in Resources */,
 				CE0B6C0C26BBC92200165651 /* Assets.xcassets in Resources */,
 				CE0B6C0726BBC92100165651 /* Main.storyboard in Resources */,
 			);
@@ -255,6 +276,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE2BCD6626BC0DE4009C1C3B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FirebaseAnalytics.framework\"\n#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/GoogleAppMeasurement.framework\"\n#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FIRAnalyticsConnector.framework\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE0B6BF826BBC92100165651 /* Sources */ = {
@@ -440,15 +481,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7SRE842CL9;
 				INFOPLIST_FILE = FastlaneTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.codeexceptional.FastlaneTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FastlaneTemplateAdHoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,15 +503,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7SRE842CL9;
 				INFOPLIST_FILE = FastlaneTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.codeexceptional.FastlaneTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FastlaneTemplateAdHoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -597,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE2BCD5426BC0AE0009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 8.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE2BCD5526BC0AE0009C1C3B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE2BCD5426BC0AE0009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CE0B6C0826BBC92100165651 /* FastlaneTemplate.xcdatamodeld */ = {
