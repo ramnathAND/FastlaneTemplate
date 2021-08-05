@@ -16,7 +16,7 @@
 		CE0B6C0F26BBC92200165651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0B6C0D26BBC92200165651 /* LaunchScreen.storyboard */; };
 		CE0B6C1A26BBC92200165651 /* FastlaneTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B6C1926BBC92200165651 /* FastlaneTemplateTests.swift */; };
 		CE0B6C2526BBC92300165651 /* FastlaneTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0B6C2426BBC92300165651 /* FastlaneTemplateUITests.swift */; };
-		CE2BCD5626BC0AE0009C1C3B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE2BCD5526BC0AE0009C1C3B /* FirebaseAnalytics */; settings = {ATTRIBUTES = (Required, ); }; };
+		CE2BCD7826BC13C7009C1C3B /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CE2BCD7726BC13C7009C1C3B /* FirebaseAppDistribution-Beta */; };
 		CEAC6C9D26BBF156007D31E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAC6C9C26BBF156007D31E9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2BCD5626BC0AE0009C1C3B /* FirebaseAnalytics in Frameworks */,
+				CE2BCD7826BC13C7009C1C3B /* FirebaseAppDistribution-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 			);
 			name = FastlaneTemplate;
 			packageProductDependencies = (
-				CE2BCD5526BC0AE0009C1C3B /* FirebaseAnalytics */,
+				CE2BCD7726BC13C7009C1C3B /* FirebaseAppDistribution-Beta */,
 			);
 			productName = FastlaneTemplate;
 			productReference = CE0B6BFC26BBC92100165651 /* FastlaneTemplate.app */;
@@ -236,7 +236,7 @@
 			);
 			mainGroup = CE0B6BF326BBC92100165651;
 			packageReferences = (
-				CE2BCD5426BC0AE0009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE2BCD7326BC136A009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CE0B6BFD26BBC92100165651 /* Products */;
 			projectDirPath = "";
@@ -293,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FirebaseAnalytics.framework\"\n#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/GoogleAppMeasurement.framework\"\n#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FIRAnalyticsConnector.framework\"\n";
+			shellScript = "#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FirebaseAnalytics.framework\"\n#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/GoogleAppMeasurement.framework\"\n#rm -rf \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Frameworks/FIRAnalyticsConnector.framework\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -646,7 +646,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE2BCD5426BC0AE0009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		CE2BCD7326BC136A009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -657,10 +657,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CE2BCD5526BC0AE0009C1C3B /* FirebaseAnalytics */ = {
+		CE2BCD7726BC13C7009C1C3B /* FirebaseAppDistribution-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE2BCD5426BC0AE0009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
+			package = CE2BCD7326BC136A009C1C3B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 
